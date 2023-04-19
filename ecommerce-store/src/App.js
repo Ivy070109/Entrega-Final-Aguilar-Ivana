@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Navbar />
         
-        <ItemListContainer greetings="Bienvenidos a Deepest Symphaty" noticia="Mira las nuevas tendencias"/>
+        <ItemListContainer greetings="Bienvenidos a Deepest Symphaty" />
 
         <Footer />
 
