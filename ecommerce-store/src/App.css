@@ -1,0 +1,127 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lato:wght@300;900&family=Mukta:wght@200;300&family=Oswald:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marca: 'Charm', cursive;
+  --text: 'Lato', sans-serif;
+  --title: 'Mukta', sans-serif;
+  --title-esp: 'Oswald', sans-serif;
+  --light: #ffffff;
+  --gray: #c4ccde;
+  --purple: #6b29bd
+}
+
+.navbar {
+  background-color: var(--purple);
+  border-bottom: 1px solid var(--gray);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+  font-family: var(--marca);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 350px;
+}
+
+ul {
+  list-style: none;
+  padding: .5rem 1rem;
+}
+
+li {
+  margin-bottom: .5rem;
+  font-family: var(--marca);
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedorCarrito {
+  display: flex;
+  width: 18%;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+.btn {
+  color: black;
+  margin: 2px;
+  font-size: 1.2rem;
+  font-family: var(--marca);
+}
+
+.bi {
+  margin: 3px;
+}
+
+.numerito {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50px;
+}
+
+.card {
+  color: black;
+  border: 0;
+}
+
+.card-img {
+  height: 550px;
+  margin-bottom: 0;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title1 {
+  display: inline;
+  font-weight: bolder;
+  margin-bottom: 0;
+  font-size: 4.5rem;
+  font-family: var(--title-esp);
+}
+
+.container-text {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h5 {
+  padding: 0;
+  margin-top: 0;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  font-family: 'Charm';
+  border-bottom: 10px;
+  padding: 20px;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.footer {
+  background-color: var(--purple);
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+  font-family: var(--text);
+}
