@@ -16,7 +16,6 @@ const ItemListContainer = () => {
         console.error(error)
       })
 
-      getProducts();
   }, []);
 
   return (

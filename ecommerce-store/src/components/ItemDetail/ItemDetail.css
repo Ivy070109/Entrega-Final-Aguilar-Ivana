@@ -1,0 +1,29 @@
+.detalle {
+    height: 400px;
+    width: 400px;
+}
+
+.text-uppercase {
+    color: #5a5656;
+}
+
+.lead {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.display-6 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.lead1 {
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: var(--purple);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
