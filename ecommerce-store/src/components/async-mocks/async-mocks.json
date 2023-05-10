@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "title": "Starfire",
+        "image": "https://i.ibb.co/xYXsLjX/womens-multi-sequin-star-halter-neck-tie-top.webp",
+        "price": 5825,
+        "description": "Top de lentejuelas en forma de estrella, con espalda descubierta",
+        "stock": 56,
+        "category": "camisas y remeras"
+    },
+    {
+        "id": 2,
+        "title": "Gentleman",
+        "image": "https://i.ibb.co/99VbhQr/204104-800-auto.webp",
+        "price": 7890,
+        "description": "Saco de paño cruzado, de corte inglés",
+        "stock": 68,
+        "category": "abrigos"
+    }, 
+    {
+        "id": 3,
+        "title": "Rebel Rebel",
+        "image": "https://i.ibb.co/BZttVS0/campera-cuero.jpg",
+        "price": 9070,
+        "description": "Campera de ecocuero al cuerpo, corte rocker cruzado con cinto",
+        "stock": 35,
+        "category": "abrigos"
+    },
+    {
+        "id": 4,
+        "title": "Working",
+        "image": "https://i.ibb.co/233Jfgn/204434-800-auto.webp",
+        "price": 6588,
+        "description": "Pantalón cargo de corte ajustado en piernas, incluye cadena",
+        "stock": 35,
+        "category": "pantalones"
+    }, 
+    {
+        "id": 5, 
+        "title": "Summertime",
+        "image": "https://i.ibb.co/qMkJbMV/vestidito-verano.jpg",
+        "price": 6800,
+        "description": "Vestido corto de lino, corte a con abotonadura al frente", 
+        "stock": 55,
+        "category": "vestidos"
+    },
+    {
+        "id": 6,
+        "title": "New Age",
+        "image": "https://i.ibb.co/7bGb4Zm/202209-800-auto.webp",
+        "price": 5000,
+        "description": "Camisa crop, de manga larga y corte masculino con rayas",
+        "stock": 62,
+        "category": "camisas y remeras"
+    },
+    {
+        "id": 7,
+        "title": "Canguro Flower",
+        "image": "https://i.ibb.co/0fwzJWw/canguro-flores.jpg",
+        "price": 6000,
+        "description": "Buzo crop de frisa con detalles de flores en mangas",
+        "stock": 54,
+        "category": "buzos y sweaters"
+    },
+    {
+        "id": 8,
+        "title": "Grunge",
+        "image": "https://i.ibb.co/YL3hbtz/203728-800-auto.webp",
+        "price": 8400,
+        "description": "Short de jean de corte relajado y tiro medio, con roturas",
+        "stock": 66,
+        "category": "shorts y faldas"
+    }, 
+    {
+        "id": 9,
+        "title": "Chill day",
+        "image": "https://i.ibb.co/YZ82XT4/200767-800-auto.webp",
+        "price": 4500,
+        "description": "Pantalón jogger de frisa con puño en tobillos y ajustable en cintura. Con detalle de estampa.",
+        "stock": 74,
+        "category": "pantalones"
+    }, 
+    {
+        "id": 10,
+        "title": "Autumn",
+        "image": "https://i.ibb.co/smCKNRb/190113-800-auto.webp",
+        "price": 5600,
+        "description": "Sweater de cuello redondo con mangas abuchonadas.",
+        "stock": 45,
+        "category": "buzos y sweaters"
+    },
+    {
+        "id": 11,
+        "title" : "Maddie",
+        "image": "https://i.ibb.co/Wz7k7mb/202034-800-auto.webp",
+        "price": 7500,
+        "description": "Vestido al cuerpo con recortes y mangas con ajuste a la mano",
+        "stock": 56,
+        "category": "vestidos"
+    }
+]
+

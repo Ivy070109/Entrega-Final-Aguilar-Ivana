@@ -5,15 +5,15 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
         <Navbar />
         
-        <ItemListContainer greetings="Bienvenidos a Deepest Symphaty" />
+        <ItemListContainer />
+
+        {/* <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada', quantity)} /> */}
 
         <Footer />
 
-      </header>
     </div>
   );
 }

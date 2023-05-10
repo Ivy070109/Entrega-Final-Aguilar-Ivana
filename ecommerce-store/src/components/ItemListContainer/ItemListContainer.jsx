@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Banner from '../Banner/Banner'
+import getProducts from '../GetProducts/getProducts'
+import ItemList from '../ItemList/ItemList';
 
-const ItemListContainer = (props, hi) => {
+const ItemListContainer = () => {
+
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    getProducts()
+      .then((response) => {
+        setProductos(response)
+      })
+      .catch(error => {
+        console.error(error)
+      })
+
+      getProducts();
+  }, []);
+
   return (
-    <div className="hero">
-        <div className="card">
-            <img src='./assets/BORA.JPG' className="card-img" alt="Background"/>
-            <div className="card-img-overlay">
-                <div className="container-text">
-                  <h5 className="card-title1">{props.greetings}</h5>
-                </div>
-            </div>
-        </div>
-    </div>
+    <>
+      <Banner greetings="Bienvenido a Deepest Symphaty"/>
+      <ItemList productos={productos} />
+    </>
   )
 }
 
