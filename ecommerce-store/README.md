@@ -1,3 +1,10 @@
+#Funcionalidad de la app ecommerce:
+[https://im.ezgif.com/tmp/ezgif-1-af73fa7214.gif]
+
+También se puede encontrar el gif de funcionalidad en la carpeta GIF que se encuentra en la sección public
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
