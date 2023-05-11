@@ -6,7 +6,7 @@
         "price": 5825,
         "description": "Top de lentejuelas en forma de estrella, con espalda descubierta",
         "stock": 56,
-        "category": "camisas y remeras"
+        "category": "tops"
     },
     {
         "id": 2,
@@ -33,7 +33,7 @@
         "price": 6588,
         "description": "Pantalón cargo de corte ajustado en piernas, incluye cadena",
         "stock": 35,
-        "category": "pantalones"
+        "category": "bottoms"
     }, 
     {
         "id": 5, 
@@ -51,7 +51,7 @@
         "price": 5000,
         "description": "Camisa crop, de manga larga y corte masculino con rayas",
         "stock": 62,
-        "category": "camisas y remeras"
+        "category": "tops"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "price": 6000,
         "description": "Buzo crop de frisa con detalles de flores en mangas",
         "stock": 54,
-        "category": "buzos y sweaters"
+        "category": "tops"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "price": 8400,
         "description": "Short de jean de corte relajado y tiro medio, con roturas",
         "stock": 66,
-        "category": "shorts y faldas"
+        "category": "bottoms"
     }, 
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "price": 4500,
         "description": "Pantalón jogger de frisa con puño en tobillos y ajustable en cintura. Con detalle de estampa.",
         "stock": 74,
-        "category": "pantalones"
+        "category": "bottoms"
     }, 
     {
         "id": 10,
@@ -87,7 +87,7 @@
         "price": 5600,
         "description": "Sweater de cuello redondo con mangas abuchonadas.",
         "stock": 45,
-        "category": "buzos y sweaters"
+        "category": "tops"
     },
     {
         "id": 11,
@@ -97,6 +97,33 @@
         "description": "Vestido al cuerpo con recortes y mangas con ajuste a la mano",
         "stock": 56,
         "category": "vestidos"
+    },
+    {
+        "id": 12,
+        "title": "Cherry Bomb",
+        "image": "https://i.ibb.co/7X3YCSZ/201173-800-auto.webp",
+        "price": 6790,
+        "description": "Vestido de cuero corto, al cuerpo con escote cuadrado y espalda descubierta.",
+        "stock": 12,
+        "category": "vestidos"
+    },
+    {
+        "id": 13,
+        "title": "Scottland",
+        "image": "https://i.ibb.co/QPzgH9P/205035-800-auto.webp",
+        "price": 9800,
+        "description": "Tapado de paño escoces largo, cruzado oversize con doble abotonadura y mangas amplias.",
+        "stock": 20,
+        "category": "abrigos"
+    }, 
+    {
+        "id": 14, 
+        "title": "WorkingHard",
+        "image": "https://i.ibb.co/QFb0NNd/203814-800-auto.webp",
+        "price": 5000,
+        "description": "Pantalón cargo de 6 bolsillos, calce relajado, de lona.",
+        "stock": 35,
+        "category": "bottoms"
     }
 ]
 

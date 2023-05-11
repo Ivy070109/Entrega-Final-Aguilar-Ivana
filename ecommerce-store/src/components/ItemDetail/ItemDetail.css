@@ -1,29 +1,82 @@
+.containerPrincipal {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1.8fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."; 
+  }
+
+.productoDetalle {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 3rem;
+}
+
 .detalle {
-    height: 400px;
+    margin-left: 200px;
+    height: 500px;
     width: 400px;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    margin: 80px;
+    margin-left: 20px;
 }
 
 .text-uppercase {
     color: #5a5656;
 }
 
+.title {
+    font-family: var(--title);
+    font-size: 3rem;
+}
+
 .lead {
-    font-weight: bolder;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .display-6 {
     font-weight: bolder;
     text-align: center;
     font-size: 3rem;
+    margin-bottom: 0;
 }
 
 .lead1 {
     margin-bottom: 5px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 0;
+}
+
+.controles {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn {
     background-color: var(--purple);
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.contador {
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+.carro {
+    width: 300px;
 }

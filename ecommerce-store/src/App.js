@@ -13,7 +13,10 @@ function App() {
         
         <Routes>
           <Route exact path="/" element={        <ItemListContainer /> } />
-          <Route exact path="item" element={         <ItemDetailContainer itemId={2} /> } />
+          <Route exact path="/productos" element={        <ItemListContainer /> } />
+          <Route exact path="/productos/:category" element={        <ItemListContainer /> } />
+          <Route exact path="/item/:id" element={         <ItemDetailContainer /> } />
+
         </Routes>
 
         <Footer />

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 const Item = ( {producto} ) => {
   return (
@@ -10,7 +11,7 @@ const Item = ( {producto} ) => {
               <div className="card-body">
                 <h5 className="card-title">{producto.title.substring(0, 12)}...</h5>
                 <p className="card-text lead fw-bold">${producto.price}</p>
-                <a href={`/item/${producto.id}`} className="btn btn-outline-dark">Más Detalles</a>
+                <Link to={`/item/${producto.id}`} className="btn btn-outline-dark">Más Detalles</Link>
               </div>
             </div>
           </div>

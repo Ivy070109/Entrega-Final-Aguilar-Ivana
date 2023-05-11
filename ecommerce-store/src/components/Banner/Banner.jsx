@@ -10,7 +10,9 @@ const Banner = (props) => {
                 <img src='./assets/BORA.JPG' className="card-img" alt="Background"/>
                 <div className="card-img-overlay">
                     <div className="container-text">
-                    <h5 className="card-title1">{greetings}</h5>
+                        <h5 className="card-title1">{greetings}</h5>
+                        <br />
+                        <h6>Descubrí los nuevos ingresos</h6>
                     </div>
                 </div>
             </div>
