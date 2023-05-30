@@ -22,4 +22,3 @@ const Item = ( {producto} ) => {
 export default Item
 
 
-//{`/productos/${producto.id}`}
