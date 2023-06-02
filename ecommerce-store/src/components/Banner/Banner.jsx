@@ -12,7 +12,7 @@ const Banner = (props) => {
                     <div className="container-text">
                         <h5 className="card-title1">{greetings}</h5>
                         <br />
-                        <h6>Descubrí los nuevos ingresos</h6>
+                        <h6 className="descripcion">Descubrí los nuevos ingresos</h6>
                     </div>
                 </div>
             </div>
