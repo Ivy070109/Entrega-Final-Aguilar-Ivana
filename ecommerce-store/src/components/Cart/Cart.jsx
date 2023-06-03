@@ -1,17 +1,12 @@
 import React, { useContext } from 'react'
 import "./Cart.css"
+import { getFirestore, addDoc, collection } from 'firebase/firestore'
 import { CartContext } from '../../Context/CartContext'
 
 const Cart = () => {
 
-  const { carrito, setCarrito, vaciarCarrito } = useContext(CartContext);
-
-  const total = carrito.reduce((acc, prod) => acc + prod.price * prod.cantidad, 0);
-
-  const handleVaciar = () => {
-    vaciarCarrito();
-  }
-
+  const { carrito, setCarrito, vaciarCarrito, total } = useContext(CartContext)  
+  
   const deleteProduct = (id) => {
     const foundId = carrito.find((element) => element.id === id);
 
@@ -20,6 +15,24 @@ const Cart = () => {
     })
 
     setCarrito(newCart)
+  }
+
+  const order = {
+    comprador: {
+      name: "Ivana",
+      email: "ivy@gmail.com",
+      phone: 44560403,
+      addres: "Av. Siempre Viva 123"
+    }, 
+    items: carrito.map(product => ({ id: product.id, title: product.name, price: product.price, quantity: product.cantidad })),
+    total: total(),
+  }
+
+  const handleClick = () => {
+    const db = getFirestore();
+    const ordersCollection = collection(db, "orders");
+    addDoc(ordersCollection, order)
+      .then(({ id }) => console.log(id))
   }
 
   return (
@@ -44,9 +57,9 @@ const Cart = () => {
       {
         carrito.length > 0 ? 
         <>
-          <h2 className="total">Precio Total: ${total}</h2> 
-          <button className="btn" onClick={handleVaciar}>Vaciar</button>
-          <button className="btn">Checkout</button>
+          <h2 className="total">Total: ${total}</h2> 
+          <button className="btn" onClick={() => vaciarCarrito()}>Vaciar</button>
+          <button onClick={handleClick}>Checkout</button>
         </> :
         <h2>El carrito está vacio</h2>
       }
