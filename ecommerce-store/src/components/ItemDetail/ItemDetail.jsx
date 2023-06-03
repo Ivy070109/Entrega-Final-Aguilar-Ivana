@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+//import { toCapital } from '../../Helpers/toCapital';
 import { useContext } from 'react';
-import { CartContext } from '../../Context/CartContext';
+import { CartContext } from '../../Context/CartContext'; 
 import { Link } from 'react-router-dom';
 
 const ItemDetail = ( {item} ) => {
@@ -14,22 +15,20 @@ const ItemDetail = ( {item} ) => {
   const [quantityAdded, setQuantityAdded] = useState(0);
 
   const addOnCart = (item, cantidad) => {
-
-    const itemAdd = {...item, cantidad};
-
+    const itemAdd = {...item, cantidad}
     const newCart = [...carrito];
-    const onCart = newCart.find((producto) => producto.id === itemAdd);
+    const onCart = newCart.find((producto) => producto.id === itemAdd.id);
 
     setQuantityAdded(cantidad);
 
     if (onCart) {
-        onCart.cantidad += onCart.cantidad + cantidad;
-        setCarrito(newCart)
+      onCart.cantidad += onCart.cantidad + cantidad;
+      setCarrito(newCart)
     } else {
-    newCart.push(itemAdd);
+      newCart.push(itemAdd);
     }
     setCarrito(newCart);
-  }
+}
 
   const handleRestar = () => {
     cantidad > 1 && setCantidad(cantidad - 1);
@@ -43,11 +42,11 @@ const ItemDetail = ( {item} ) => {
   return (
     <div className="containerPrincipal">
         <div className="productoDetalle">
-            <img className="detalle" src={item.image} alt={item.title} />
+            <img className="detalle" src={item.img} alt={item.name} />
         </div>
         <div className="datos">
-            <h4 className="text-uppercase">{item.category}</h4>
-            <h1 className="title display-5">{item.title}</h1>
+            <h4 className="text-uppercase">Categoria: {item.category}</h4>
+            <h1 className="title display-5">{item.name}</h1>
             <div className="lead">
               <h3 className="display-6 my-4">$ {item.price}</h3>
               <p className="lead1">{item.description}</p>
@@ -58,14 +57,13 @@ const ItemDetail = ( {item} ) => {
                       <Link to="/cart" className="option btn">Terminar Compra</Link>
                       <Link to="/productos" className="option btn">Seguir Comprando</Link>
                     </>
-                  ) : (
-                    <ItemCount className="contador" cantidad={cantidad} stock={item.stock} item={item} handleSumar={handleSumar} handleRestar={handleRestar} handleOnAdd={() => { addOnCart(item, cantidad) }} />  
-
+                  ) : ( 
+                    <ItemCount className="contador" cantidad={cantidad} stock={item.stock} handleSumar={handleSumar} handleRestar={handleRestar} handleOnAdd={() => { addOnCart(item, cantidad) }} /> 
                   )
-                }
+                } 
               </div>
             </div>
-        </div>
+        </div> 
     </div>
   )
 }

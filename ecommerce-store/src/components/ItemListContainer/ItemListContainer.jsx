@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import { getProducts } from '../../Helpers/getProducts';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../services/firebase/firebaseConfig';
+// import { getProducts } from '../../Helpers/getProducts';
+import { Link } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
-  const [title, setTitle] = useState("Productos");
   const category = useParams().category;
 
   useEffect(() => {
-    getProducts()
-      .then((res) => {
-        if (category) {
-          setProductos( res.filter((prod) => prod.category === category) )
-          setTitle(category);
-        } else {
-          setProductos(res);
-          setTitle("Productos");
-        }
+
+    const collectionRef = category
+      ? query(collection(db, "products"), where("category", "==", category))
+      : collection(db, "products")
+
+    getDocs(collectionRef)
+      .then(response => {
+        const productosAdaptados = response.docs.map(doc => {
+          const data = doc.data()
+          return { id: doc.id, ...data }
+        })
+        setProductos(productosAdaptados)
       })
   }, [category]);
 
@@ -27,9 +32,10 @@ const ItemListContainer = () => {
         <>
           <div className="buttons">
             <Link className="nav-link btn btn-outline-dark me-2" to="/productos/abrigos">Abrigos</Link>
-            <Link className="nav-link btn btn-outline-dark me-2" to="/productos/tops">Tops</Link>
-            <Link className="nav-link btn btn-outline-dark me-2" to="/productos/bottoms">Bottoms</Link>
+            <Link className="nav-link btn btn-outline-dark me-2" to="/productos/tops">Partes de Arriba</Link>
+            <Link className="nav-link btn btn-outline-dark me-2" to="/productos/bottoms">Partes de Abajo</Link>
             <Link className="nav-link btn btn-outline-dark me-2" to="/productos/vestidos">Vestidos</Link>
+            <Link className="nav-link btn btn-outline-dark me-2" to="/productos/sweaters">Sweaters y Buzos</Link>
           </div>
         </>
     )
@@ -39,10 +45,8 @@ const ItemListContainer = () => {
     <>
       <h2 className="second-title">Nuestros Productos</h2>
       <ShowProducts />
-      <hr />
-      <ItemList productos={productos} title={title}/>
+      <ItemList productos={productos} />
     </>
   )
 }
-
 export default ItemListContainer
