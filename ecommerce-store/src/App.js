@@ -9,7 +9,7 @@ import { CartProvider } from './Context/CartContext';
 import AboutUs from './components/AboutUs/AboutUs';
 import Register from './components/Register/Register';
 import Cart from './components/Cart/Cart';
-//import Checkout from './components/Checkout/Checkout';
+import Checkout from './components/Checkout/Checkout';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/nosotros" element={ <AboutUs /> } />
             <Route exact path="/registro" element={ <Register />} />
             <Route exact path="/cart" element={ <Cart />} /> 
-            {/* <Route exact path="/checkout" element={ <Checkout />} />  */}
+            <Route exact path="/checkout" element={ <Checkout />} />  
 
           </Routes>
 

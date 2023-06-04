@@ -1,7 +1,9 @@
 import React, { useContext } from 'react'
 import "./Cart.css"
-import { getFirestore, addDoc, collection } from 'firebase/firestore'
+import { Link } from 'react-router-dom'
+//import { getFirestore, addDoc, collection } from 'firebase/firestore'
 import { CartContext } from '../../Context/CartContext'
+//import Checkout from '../Checkout/Checkout'
 
 const Cart = () => {
 
@@ -17,23 +19,23 @@ const Cart = () => {
     setCarrito(newCart)
   }
 
-  const order = {
-    comprador: {
-      name: "Ivana",
-      email: "ivy@gmail.com",
-      phone: 44560403,
-      addres: "Av. Siempre Viva 123"
-    }, 
-    items: carrito.map(product => ({ id: product.id, title: product.name, price: product.price, quantity: product.cantidad })),
-    total: total(),
-  }
+  // const order = {
+  //   comprador: {
+  //     name: "Ivana",
+  //     email: "ivy@gmail.com",
+  //     phone: 44560403,
+  //     addres: "Av. Siempre Viva 123"
+  //   }, 
+  //   items: carrito.map(product => ({ id: product.id, title: product.name, price: product.price, quantity: product.cantidad })),
+  //   total: {total},
+  // }
 
-  const handleClick = () => {
-    const db = getFirestore();
-    const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection, order)
-      .then(({ id }) => console.log(id))
-  }
+  // const handleClick = () => {
+  //   const db = getFirestore();
+  //   const ordersCollection = collection(db, "orders");
+  //   addDoc(ordersCollection, order)
+  //     .then(({ id }) => console.log(id))
+  // }
 
   return (
     <div className="container">
@@ -59,7 +61,7 @@ const Cart = () => {
         <>
           <h2 className="total">Total: ${total}</h2> 
           <button className="btn" onClick={() => vaciarCarrito()}>Vaciar</button>
-          <button onClick={handleClick}>Checkout</button>
+          <Link to="/registro" className="btn">Checkout</Link>
         </> :
         <h2>El carrito está vacio</h2>
       }
