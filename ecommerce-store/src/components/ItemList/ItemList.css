@@ -16,6 +16,7 @@
     flex-direction: column;
     border-radius: 1rem;
     overflow: hidden;
+    background-color: #6b29bd;
 }
 
 .muestrario {
