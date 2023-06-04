@@ -45,7 +45,7 @@ const ItemDetail = ( {data} ) => {
             <img className="detalle" src={data.img} alt={data.name} />
         </div>
         <div className="datos">
-            <h4 className="text-uppercase">Categoria: {data.category}</h4>
+            <h4 className="text-uppercase">{data.category}</h4>
             <h1 className="title display-5">{data.name}</h1>
             <div className="lead">
               <h3 className="display-6 my-4">$ {data.price}</h3>

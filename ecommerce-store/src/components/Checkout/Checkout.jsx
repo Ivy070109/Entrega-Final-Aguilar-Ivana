@@ -11,11 +11,11 @@ const Checkout = () => {
 
     const { carrito, vaciarCarrito, total } = useContext(CartContext)
 
-    const crearOrden = async ({ nombre, telefono, email }) => {
+    const createOrder = async ({ nombre, telefono, email }) => {
         setLoading(true)
 
         try{
-            const crearOrden = {
+            const objOrder = {
                 comprador: {
                     nombre, telefono, email
                 },
@@ -23,17 +23,14 @@ const Checkout = () => {
                 total: {total},
                 dia: Timestamp.fromDate(new Date())
             }
-            
-            const handleClick = () => {
-                const db = getFirestore();
-                const ordersCollection = collection(db, "orders");
-                addDoc(ordersCollection, crearOrden)
-                    .then(({ id }) => setOrderId(id))
-            }
 
+            const db = getFirestore();
+            const ordersCollection = collection(db, "orders");
+            addDoc(ordersCollection, objOrder)
+                .then(({ id }) => setOrderId(id))
             
-            //setOrderId(orderAdded.id)
-            //vaciarCarrito()
+            
+            vaciarCarrito()
         } catch (error) {
             console.log(error)
         } finally {
@@ -54,7 +51,7 @@ const Checkout = () => {
     return (
         <div>
             <h1>Checkout</h1>
-            <Register onConfirm={crearOrden}/>
+            <Register onConfirm={createOrder} onHandle/>
         </div>
     )
 }
