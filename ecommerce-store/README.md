@@ -1,5 +1,5 @@
 #Funcionalidad de la app ecommerce:
-[https://im.ezgif.com/tmp/ezgif-1-af73fa7214.gif]
+[https://im3.ezgif.com/tmp/ezgif-3-a10908de28.gif]
 
 #Para deployar la app mediente npm start
 

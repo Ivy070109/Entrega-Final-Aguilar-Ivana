@@ -1,5 +1,5 @@
 .container-elements{
-    background-color: pink;
+    background-color: #ba95e6;
     height: fit-content;
 }
 
@@ -13,17 +13,34 @@
     margin-top: 100px;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 30px;
+    margin: 10px;
+    align-items: center;
   }
   
  .cartContent > img {
-   height: 120px;
-   width: 100px;
+   height: 160px;
+   width: 120px;
    text-align: center;
    justify-content: center;
-   margin-bottom: 100px;
+   margin-bottom: 80px;
+}
+
+.cartContent > p {
+    font-family: var(--title);
+    font-size: 1.5rem;
+    margin-bottom: 80px;
 }
 
 .cart-delete-button {
     cursor: pointer;
+}
+
+.total {
+    font-family: var(--title-esp);
+    margin-top: 30px;
+}
+
+.detalles {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-//import { toCapital } from '../../Helpers/toCapital';
 import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext'; 
 import { Link } from 'react-router-dom';
@@ -38,13 +37,12 @@ const ItemDetail = ( {data} ) => {
     cantidad < data.stock && setCantidad(cantidad + 1);
   }
 
-
   return (
     <div className="containerPrincipal">
-        <div className="productoDetalle">
-            <img className="detalle" src={data.img} alt={data.name} />
-        </div>
-        <div className="datos">
+      <div className="productoDetalle">
+        <img className="detalle" src={data.img} alt={data.name} />
+      </div>
+      <div className="datos">
             <h4 className="text-uppercase">{data.category}</h4>
             <h1 className="title display-5">{data.name}</h1>
             <div className="lead">
@@ -54,8 +52,8 @@ const ItemDetail = ( {data} ) => {
                 { 
                   quantityAdded > 0 ? (
                     <>
-                      <Link to="/cart" className="option btn">Terminar Compra</Link>
-                      <Link to="/productos" className="option btn">Seguir Comprando</Link>
+                      <Link to="/cart" className="option btn btn-outline-dark me-2">Terminar Compra</Link>
+                      <Link to="/productos" className="option btn btn-outline-dark me-2">Seguir Comprando</Link>
                     </>
                   ) : ( 
                     <ItemCount className="contador" cantidad={cantidad} stock={data.stock} handleSumar={handleSumar} handleRestar={handleRestar} handleOnAdd={() => { addOnCart(data, cantidad) }} /> 
@@ -63,7 +61,7 @@ const ItemDetail = ( {data} ) => {
                 } 
               </div>
             </div>
-        </div> 
+      </div> 
     </div>
   )
 }

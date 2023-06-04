@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import "./Cart.css"
 import { Link } from 'react-router-dom'
-//import { getFirestore, addDoc, collection } from 'firebase/firestore'
 import { CartContext } from '../../Context/CartContext'
-//import Checkout from '../Checkout/Checkout'
 
 const Cart = () => {
 
@@ -19,24 +17,6 @@ const Cart = () => {
     setCarrito(newCart)
   }
 
-  // const order = {
-  //   comprador: {
-  //     name: "Ivana",
-  //     email: "ivy@gmail.com",
-  //     phone: 44560403,
-  //     addres: "Av. Siempre Viva 123"
-  //   }, 
-  //   items: carrito.map(product => ({ id: product.id, title: product.name, price: product.price, quantity: product.cantidad })),
-  //   total: {total},
-  // }
-
-  // const handleClick = () => {
-  //   const db = getFirestore();
-  //   const ordersCollection = collection(db, "orders");
-  //   addDoc(ordersCollection, order)
-  //     .then(({ id }) => console.log(id))
-  // }
-
   return (
     <div className="container">
       <h1 className="main-title">Carrito</h1>
@@ -49,7 +29,7 @@ const Cart = () => {
               <p>Precio unit: ${prod.price}</p>
               <p>Precio total: ${prod.price * prod.cantidad}</p> 
               <p>Cantidad: {prod.cantidad}</p>
-              <h3 className="cart-delete-button" onClick={() => deleteProduct(prod.id)}>❌</h3>
+              <p className="cart-delete-button" onClick={() => deleteProduct(prod.id)}>❌</p>
 
             </div>
           </div>
@@ -60,10 +40,17 @@ const Cart = () => {
         carrito.length > 0 ? 
         <>
           <h2 className="total">Total: ${total}</h2> 
-          <button className="btn" onClick={() => vaciarCarrito()}>Vaciar</button>
-          <Link to="/checkout" className="btn">Checkout</Link>
+          <br />
+          <div className="detalles">
+            <button id="vaciar" className="btn btn-outline-dark me-2" onClick={() => vaciarCarrito()}>Vaciar</button>
+            <Link id="check" to="/checkout" className="btn btn-outline-dark me-2">Checkout</Link>
+          </div>
         </> :
-        <h2>El carrito está vacio</h2>
+        <>
+          <div className="container" id="especial">
+            <h2 className="total">El carrito está vacio</h2>
+          </div>
+        </>
       }
     </div>
   )
