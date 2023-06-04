@@ -39,16 +39,22 @@ const Checkout = () => {
     }
 
         if(loading) {
-            return <h1>Se está generando su orden...</h1>
+            return <h1 className="main-title">Se está generando su orden...</h1>
         }
 
         if(orderId) {
-            return <h1>El ID de su orden es: {orderId}</h1>
+            return (
+                <div className="container" id="especial">
+                    <h1 className="main-title">El ID de su orden es: {orderId}</h1>
+                    < br />
+
+                    <h1 className="main-title">¡Gracias por su compra!</h1>
+                </div>
+            )
         }
 
     return (
         <div>
-            <h1>Checkout</h1>
             <Register onConfirm={createOrder} onHandle/>
         </div>
     )

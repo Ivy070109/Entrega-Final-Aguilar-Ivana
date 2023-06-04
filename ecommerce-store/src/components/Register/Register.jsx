@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import "./Register.css"
-//import { Link } from 'react-router-dom'
-//import { getFirestore, addDoc, collection } from 'firebase/firestore'
-//import { CartContext } from '../../Context/CartContext'
 
-
-const Register = ({ onConfirm, onClick }) => {
+const Register = ({ onConfirm }) => {
 
     const [nombre, setNombre] = useState("")
     const [email, setEmail] = useState("")
@@ -22,14 +18,16 @@ const Register = ({ onConfirm, onClick }) => {
     }
     
     return (
-        <div className="container">
+        <div className="container" id="especial">
             <h1 className="main-title">Registro de Compra</h1>
+            <div className="forma">
                 <form className="formulario" onSubmit={handleSubmit}>
                     <input type="text" placeholder="Ingresa tu nombre" value={nombre} onChange={({ target }) => setNombre(target.value)} />
                     <input type="email" placeholder="Ingresa tu e-mail" value={email} onChange={({ target }) => setEmail(target.value)} name="email" />
                     <input type="text" placeholder="Ingresa tu teléfono" value={telefono} onChange={({ target }) => setTelefono(target.value)} name="telefono" />
-                <button className="btn" type="submit">Checkout</button>  
+                <button className="btn btn-outline-dark me-2" type="submit" id="botoncito">Checkout</button>  
                 </form>
+            </div>
         </div>
     )
 }

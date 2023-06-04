@@ -1,0 +1,23 @@
+.somos {
+    font-family: var(--title-esp);
+    font-size: 3rem;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.descriptivo {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.disqueria {
+    align-items: center;
+    margin-left: 150px;
+    padding: 10px;
+    border-radius: 15%;
+    height: 500px;
+}

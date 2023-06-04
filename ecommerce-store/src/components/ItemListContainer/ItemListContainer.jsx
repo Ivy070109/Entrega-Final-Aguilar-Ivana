@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
-  const [loading, setLoading] = useState(false)
   const [data, setData] = useState([]);
   const { category } = useParams();
 
@@ -26,23 +25,23 @@ const ItemListContainer = () => {
 
   const ShowProducts = () => {
 return (
-        <>
-          <div className="buttons-muestra me-2">
-              <Link className="nav-link btn btn-outline-dark me-2" to="/productos/abrigos">Abrigos</Link>
-              <Link className="nav-link btn btn-outline-dark me-2" to="/productos/tops">Partes de Arriba</Link>
-              <Link className="nav-link btn btn-outline-dark me-2" to="/productos/bottoms">Partes de Abajo</Link>
-              <Link className="nav-link btn btn-outline-dark me-2" to="/productos/vestidos">Vestidos</Link>
-              <Link className="nav-link btn btn-outline-dark me-2" to="/productos/sweaters">Sweaters y Buzos</Link>
-            </div>
-        </>
+      <>
+        <div className="buttons-muestra me-2">
+          <Link className="nav-link btn btn-outline-dark me-2" to="/productos/abrigos" type="button" >Abrigos</Link>
+          <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/tops">Partes de Arriba</Link>
+          <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/bottoms">Partes de Abajo</Link>
+          <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/vestidos">Vestidos</Link>
+          <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/sweaters">Sweaters y Buzos</Link>
+        </div>
+      </>
     )
   }
 
   return (
     <>
-      <h2 className="title-products" id="title">Nuestros Productos</h2>
-      <ShowProducts />
-      <ItemList productos={data} />
+        <h2 className="title-products" id="title">Nuestros Productos</h2>
+        <ShowProducts />
+        <ItemList productos={data} />
     </>
   )
 }

@@ -3,8 +3,6 @@
     justify-content: center;
     margin-bottom: 5px;
     padding-bottom: 5px;
-    font-family: 'Charm';
-    font-size: 2rem;
     align-items: center;
 }
 
@@ -16,8 +14,3 @@
     text-align: center;
 }
 
-.btn {
-    background-color: var(--purple);
-    margin-top: 0;
-    margin-bottom: 25px;
-}
