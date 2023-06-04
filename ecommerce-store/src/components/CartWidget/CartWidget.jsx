@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <>
         <div className="contenedorCarrito">
-            <Link to="/cart" className="btn btn-outline-dark"><i class="bi bi-bag-heart-fill"><span className="numerito" style={{width:"20px", height:"25px", borderRadius:"50%", backgroundColor:"red"}}>{quantityOnCart()}</span></i></Link>
+            <Link to="/cart" className="btn btn-outline-dark" id="bolsita"><i class="bi bi-bag-heart-fill"><span className="numerito" style={{width:"20px", height:"25px", borderRadius:"50%", backgroundColor:"red"}}>{quantityOnCart()}</span></i></Link>
         </div>
     </> 	
   )

@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './ItemListContainer.css'
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
-// import { getProducts } from '../../Helpers/getProducts';
 import { Link } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
+  const [loading, setLoading] = useState(false)
   const [data, setData] = useState([]);
   const { category } = useParams();
-  //const category = useParams().category;
 
   useEffect(() => {
     const querydb = getFirestore();
@@ -26,7 +25,7 @@ const ItemListContainer = () => {
   }, [category]);
 
   const ShowProducts = () => {
-    return (
+return (
         <>
           <div className="buttons-muestra me-2">
               <Link className="nav-link btn btn-outline-dark me-2" to="/productos/abrigos">Abrigos</Link>
@@ -48,3 +47,8 @@ const ItemListContainer = () => {
   )
 }
 export default ItemListContainer
+
+//setLoading(true)
+// //    if(loading) {
+//   return <h1>Se está generando su orden...</h1>
+// }

@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react'
 import "./Register.css"
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 //import { getFirestore, addDoc, collection } from 'firebase/firestore'
 //import { CartContext } from '../../Context/CartContext'
 
 
-const Register = ({ onConfirm }) => {
+const Register = ({ onConfirm, onClick }) => {
 
     //const {carrito, total } = useContext(CartContext)
 
@@ -46,7 +46,7 @@ const Register = ({ onConfirm }) => {
                 <input type="text" placeholder="Ingresa tu nombre" value={nombre} onChange={({ target }) => setNombre(target.value)} />
                 <input type="email" placeholder="Ingresa tu e-mail" value={email} onChange={({ target }) => setEmail(target.value)} name="email" />
                 <input type="text" placeholder="Ingresa tu teléfono" value={telefono} onChange={({ target }) => setTelefono(target.value)} name="telefono" />
-                    <Link to="/checkout" className="btn" type="submit" onClick={(e) => }>Checkout</Link> 
+                    {/* <Link to="/checkout" className="btn" type="submit" onClick={handleClick}>Checkout</Link>   */}
                 </form>
         </div>
     )
