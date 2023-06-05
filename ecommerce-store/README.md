@@ -10,7 +10,8 @@ Desde éste podremos eliminar productos, vaciarlo completamente o inicializar un
 (también hay copia del GIF de muestra de navegación en la sección Public => GIF)
 
 
-Se utilizaron las librerias de Boostrap, Boostrap Icons5, React-Reuter-Dom y sus funcionalidades se ejecutan mediante Context.
+Se utilizaron las librerias de Boostrap y Boostrap Icons5, para los estilos e iconos. Bootstrap-reactstrap, para los loading. React-Reuter-Dom, para la navegación y los enlaces.
+Sus funcionalidades se ejecutan mediante Context.
 Las Apis fueron generadas autonomamente con Firebase Firestore.
 
 

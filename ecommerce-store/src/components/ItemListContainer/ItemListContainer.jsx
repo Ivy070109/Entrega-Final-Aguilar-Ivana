@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 const ItemListContainer = () => {
 
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const { category } = useParams();
 
   useEffect(() => {
@@ -17,9 +18,11 @@ const ItemListContainer = () => {
       const queryFilter = query(queryCollection, where("category", "==" , category))
     getDocs(queryFilter)
       .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+      setLoading(true)
     } else {
       getDocs(queryCollection)
       .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+      setLoading(true)
     }
   }, [category]);
 
@@ -47,7 +50,3 @@ return (
 }
 export default ItemListContainer
 
-//setLoading(true)
-// //    if(loading) {
-//   return <h1>Se está generando su orden...</h1>
-// }
