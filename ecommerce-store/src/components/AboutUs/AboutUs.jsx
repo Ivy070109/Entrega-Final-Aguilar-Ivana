@@ -3,7 +3,7 @@ import "./AboutUs.css"
 
 const AboutUs = () => {
   return (
-    <div className="container">
+    <div className="container1">
       <h1 className="main-title">Somos Deepest Symphaty</h1>
       <div className="descriptivo">
         <p>Nuestro local a la calle es la tienda de indumentaria más grande del país, ubicada en Sarmiento 778, en el microcentro de la ciudad de Rosario, Argentina.</p>

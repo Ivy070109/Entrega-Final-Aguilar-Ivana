@@ -3,7 +3,6 @@
     font-size: 3rem;
     margin: 20px;
     padding: 10px;
-
 }
 
 .buttons-muestra {
@@ -14,7 +13,6 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-
 }
 
 .btn-outline-dark {
@@ -25,4 +23,15 @@
 
 .btn-outline-dark:hover {
     color: bisque;
+}
+
+@media screen and (max-width: 420px) {
+    .buttons-muestra {
+        margin: 0;
+    }
+
+    .btn-outline-dark {
+        padding: 0;
+        font-size: 1rem;
+    }
 }

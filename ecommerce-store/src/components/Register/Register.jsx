@@ -18,7 +18,7 @@ const Register = ({ onConfirm }) => {
     }
     
     return (
-        <div className="container" id="especial">
+        <div className="container1" id="especial">
             <h1 className="main-title">Registro de Compra</h1>
             <div className="forma">
                 <form className="formulario" onSubmit={handleSubmit}>

@@ -8,7 +8,6 @@ import { useParams } from 'react-router-dom';
 const ItemListContainer = () => {
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const { category } = useParams();
 
   useEffect(() => {
@@ -18,11 +17,9 @@ const ItemListContainer = () => {
       const queryFilter = query(queryCollection, where("category", "==" , category))
     getDocs(queryFilter)
       .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
-      setLoading(true)
     } else {
       getDocs(queryCollection)
       .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
-      setLoading(true)
     }
   }, [category]);
 
@@ -30,7 +27,7 @@ const ItemListContainer = () => {
 return (
       <>
         <div className="buttons-muestra me-2">
-          <Link className="nav-link btn btn-outline-dark me-2" to="/productos/abrigos" type="button" >Abrigos</Link>
+          <Link className="nav-link btn btn-outline-dark me-2" to="/productos/abrigos" type="button">Abrigos</Link>
           <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/tops">Partes de Arriba</Link>
           <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/bottoms">Partes de Abajo</Link>
           <Link type="button" class="nav-link btn btn-outline-dark me-2" to="/productos/vestidos">Vestidos</Link>
@@ -44,7 +41,7 @@ return (
     <>
         <h2 className="title-products" id="title">Nuestros Productos</h2>
         <ShowProducts />
-        <ItemList productos={data} />
+        <ItemList productos={data} /> 
     </>
   )
 }

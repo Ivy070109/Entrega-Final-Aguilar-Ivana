@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.number {
+    align-items: center;
+    display: flex;
+}
 
 .controls {
     display: flex;

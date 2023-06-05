@@ -9,6 +9,45 @@
       ". .";  
   }
 
+  @media screen and (max-width: 768px) {
+    .containerPrincipal {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .productoDetalle {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+      }
+      .detalle {
+        margin: 320px;
+        padding: 0;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+        .containerPrincipal {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            background-color: aquamarine;
+          }
+    
+          .productoDetalle {
+            flex-direction: column;
+            background-color: blue;
+          }
+          .detalle {
+            margin-right: 0;
+          }
+        }
+
 .productoDetalle {
     display: flex;
     flex-direction: row;
@@ -20,7 +59,6 @@
     margin-left: 200px;
     height: 500px;
     width: 400px;
-    display: flex;
 }
 
 .datos {
@@ -81,3 +119,4 @@
 .carro {
     width: 300px;
 }
+

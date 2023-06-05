@@ -16,8 +16,8 @@
 
 .disqueria {
     align-items: center;
-    margin-left: 150px;
     padding: 10px;
     border-radius: 15%;
     height: 500px;
+    width: 100%;
 }

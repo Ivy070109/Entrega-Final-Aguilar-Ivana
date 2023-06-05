@@ -43,24 +43,24 @@ const ItemDetail = ( {data} ) => {
         <img className="detalle" src={data.img} alt={data.name} />
       </div>
       <div className="datos">
-            <h4 className="text-uppercase">{data.category}</h4>
-            <h1 className="title display-5">{data.name}</h1>
-            <div className="lead">
-              <h3 className="display-6 my-4">$ {data.price}</h3>
-              <p className="lead1">{data.description}</p>
-              <div className="contadorFinal">
-                { 
-                  quantityAdded > 0 ? (
-                    <>
-                      <Link to="/cart" className="option btn btn-outline-dark me-2">Terminar Compra</Link>
-                      <Link to="/productos" className="option btn btn-outline-dark me-2">Seguir Comprando</Link>
-                    </>
-                  ) : ( 
-                    <ItemCount className="contador" cantidad={cantidad} stock={data.stock} handleSumar={handleSumar} handleRestar={handleRestar} handleOnAdd={() => { addOnCart(data, cantidad) }} /> 
-                  )
-                } 
-              </div>
-            </div>
+        <h4 className="text-uppercase">{data.category}</h4>
+        <h1 className="title display-5">{data.name}</h1>
+        <div className="lead">
+          <h3 className="display-6 my-4">$ {data.price}</h3>
+          <p className="lead1">{data.description}</p>
+          <div className="contadorFinal">
+            { 
+              quantityAdded > 0 ? (
+                <>
+                  <Link to="/cart" className="option btn btn-outline-dark me-2">Terminar Compra</Link>
+                  <Link to="/productos" className="option btn btn-outline-dark me-2">Seguir Comprando</Link>
+                </>
+              ) : ( 
+                <ItemCount className="contador" cantidad={cantidad} stock={data.stock} handleSumar={handleSumar} handleRestar={handleRestar} handleOnAdd={() => { addOnCart(data, cantidad) }} /> 
+              )
+            } 
+          </div>
+        </div>
       </div> 
     </div>
   )
